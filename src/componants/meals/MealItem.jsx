@@ -1,7 +1,8 @@
 
 import { useContext } from "react";
-import CardContext from "../store/cart-context";
+import CardContext from "../../store/cart-context";
 import Form from './MealItemForm'
+
 export default function Item({foods}){
 const cartctx=useContext(CardContext)
 const addToCartHANDELER=(amount)=>{

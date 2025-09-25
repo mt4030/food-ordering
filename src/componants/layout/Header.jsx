@@ -1,9 +1,5 @@
-import Headbtn from './HeaderCartButton'
-
-type NavbarProps = {
-  onShow: () => void
-}
-export default function Navbar({onShow}:NavbarProps){
+import Headbtn from "../cart/HeaderCartButton"
+export default function Navbar({onShow}){
 
 
 

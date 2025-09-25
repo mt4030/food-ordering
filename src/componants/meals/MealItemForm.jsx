@@ -1,19 +1,17 @@
 import Input from './input'
 import { useState ,createContext, useRef} from "react";
-export const amountContext=createContext()
+export const amountContext=createContext(null)
 
-type FormProps = {
-  onCart: (amount: number) => void
-}
 
-export default function Form({onCart}:FormProps){
+
+export default function Form({onCart}){
     const[valid,setvalid]=useState(true)
-const amountInputRef=useRef<HTMLInputElement>(null)
+const amountInputRef=useRef(null)
 
 const handelsubmit=(e)=>{
    e.preventDefault()
-const enteredAmount = amountInputRef.current.value;
-if (enteredAmount.trim().length === 0) {  // check string before conversion
+const enteredAmount = amountInputRef.current?.value;
+if (enteredAmount.trim().length === 0) {  
   setvalid(false);
   return;
 }

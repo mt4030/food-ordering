@@ -1,5 +1,6 @@
-import CardContext from "../store/cart-context"
+import CardContext from "../../store/cart-context"
 import { useContext,useState,useEffect } from "react"
+
 export default function Headbtn({onClickShow}){
 const cartctx=useContext(CardContext)
 const numberOfCartItems= (cartctx.items ?? []).reduce((cur,item)=>{

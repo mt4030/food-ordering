@@ -1,22 +1,7 @@
 import { useReducer } from "react";
-import type { ReactNode } from "react"; 
+
 import CardContext from "./cart-context";
 
-export type CartItem = {
-  id: number
-  name: string
-  price: number
-  amount: number
-}
-
-type CartState = {
-  items: CartItem[]
-  totalAmount: number
-}
-
-type CartAction =
-  | { identifier: 'ADD'; item: CartItem }
-  | { identifier: 'REMOVE'; id: number }
 
 
 const defualtCartstate={
@@ -26,7 +11,7 @@ const defualtCartstate={
 
 
 ///add dispatch
-const cartReducer = (state:CartState, action:CartAction) => {
+const cartReducer = (state, action) => {
   if (action.identifier === 'ADD') {
     const existingItemIndex = state.items.findIndex(item => item.id === action.item.id);
     const existingItem = state.items[existingItemIndex];
@@ -91,17 +76,15 @@ const cartReducer = (state:CartState, action:CartAction) => {
 };
 
 
-type CartProviderProps = {
-  children: ReactNode
-}
 
-export default function Cardprovider({ children }: CartProviderProps){
+
+export default function Cardprovider({ children }){
  const[cartstate,dispatchcartaction ]= useReducer( cartReducer,defualtCartstate)
 
-    const additemtocart=(item:CartItem) =>{
+    const additemtocart=(item) =>{
 dispatchcartaction({identifier:'ADD',item:item})
     }
-     const removeitemfromcard=(id:number) =>{
+     const removeitemfromcard=(id) =>{
 dispatchcartaction({identifier:'REMOVE',id:id})
     }
 

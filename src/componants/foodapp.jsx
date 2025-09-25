@@ -1,17 +1,12 @@
-import Hero from "./MealsSummary-hero";
-import Cart from './Cart'
-import Navbar from "./Header";
-import Food from "./AvailableMeals";
+import Hero from "./layout/MealsSummary-hero";
+import Cart from './cart/Cart'
+import Navbar from "./layout/Header";
+import Food from "./meals/AvailableMeals";
 import Cardprovider from '../store/CartProvider'
 import { useState } from "react";
-import Footer from "./footer";
-export type Foodt={
-  id:number
-  name:string
-  description:string
-  price:number
-}
-const foods:Foodt[] = [
+import Footer from "./layout/footer";
+
+const foods = [
   { id: 1, name: "Pizza", description: "Cheesy hot slice", price: 12.99 },
   { id: 2, name: "Burger", description: "Juicy beef patty", price: 9.49 },
   { id: 3, name: "Sushi", description: "Fresh salmon roll", price: 14.99 },
@@ -20,7 +15,7 @@ const foods:Foodt[] = [
 
 export default function Foodapp(){
 
-const[overlay,setoverlay]=useState<boolean>(false)
+const[overlay,setoverlay]=useState(false)
  const Showcarthandel=()=>{
 setoverlay(true)
 }

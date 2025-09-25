@@ -1,11 +1,9 @@
 import Model from "./model"
 import { useContext } from "react"
-import CardContext from "../store/cart-context";
+import CardContext from "../../store/cart-context";
 import CartItem from "./CartItem";
-type NavbarProps = {
-  onHide: () => void
-}
-const Cart =({onHide}:NavbarProps)=>{
+
+const Cart =({onHide})=>{
 
   const cartctx = useContext(CardContext);
 const totalAmount=`$${cartctx.totalAmount.toFixed(2)}`
