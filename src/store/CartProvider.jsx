@@ -1,14 +1,10 @@
 import { useReducer } from "react";
-
 import CardContext from "./cart-context";
-
-
 
 const defualtCartstate={
     items:[],
     totalAmount:0
 }
-
 
 ///add dispatch
 const cartReducer = (state, action) => {
