@@ -8,7 +8,7 @@ const {input,label}=props
         <>
         <div className="mb-5">
                <label htmlFor={input.id} className="font-bold mr-2 "> {label}</label> 
-                <input ref={ref} className="bg-blue-100 text-gray-900 w-10 rounded-2xl  pl-4"   id={input.id} defaultValue={input.default} {...input}/>
+                <input ref={ref} className="bg-blue-100 text-gray-900 w-10 rounded-2xl  pl-4"  id={input.id} defaultValue={input.default} {...input}/>
 
         </div>
     
