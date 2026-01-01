@@ -41,7 +41,7 @@ onCart(enteredAmountNum);
         ,step:1,
         default:1 }} />
    </amountContext.Provider>
-<button className=" rounded-2xl w-20 h-8 ml-5 font-bold bg-blue-600 hover:bg-blue-700 text-white">+ add</button>
+<button className=" rounded-2xl w-full h-8  font-bold bg-blue-600 hover:bg-blue-700 text-white">+ add</button>
 {!valid&&<p>please enter a valid amount (1-5)</p>}
 </form>
 </>
