@@ -1,13 +1,13 @@
-import Burger from "../assets/burger.jpg";
-import Pizza from "../assets/Pizza.png";
+import Burger from "../assets/Burger.jpg";
+import Pizza from "../assets/pizza.png";
 import Sushi from "../assets/Sushi.jpeg";
-import Pasta from "../assets/pasta.jpg";
+import Pasta from "../assets/Pasta.jpg";
 import Fried from "../assets/Fried-Chicken.jpg";
 import GreenSalad from "../assets/Green-salad.jpg";
 import Chocolate from "../assets/Chocolate-cake.png";
 
 
-export const foods = [
+export const foods = [  
   {
     id: 1,
     name: "Pizza",
